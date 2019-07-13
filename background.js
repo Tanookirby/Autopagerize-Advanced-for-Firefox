@@ -16,6 +16,7 @@ function init() {
         var defaultSettings = {
             extension_path: chrome.extension.getURL(''),
             display_message_bar: true,
+            display_page_break: true,
             exclude_patterns: localStorage['exclude_patterns'] || ''
         }
         localStorage['settings'] = JSON.stringify(defaultSettings)
