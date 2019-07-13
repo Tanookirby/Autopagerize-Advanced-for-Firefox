@@ -47,6 +47,12 @@
   "display_message_bar" : {
     "message": "Display Message Bar"
   },
+  "display_page_break" : {
+    "message": "Display Page Break"
+  },
+  "base_remain_height" : {
+    "message": "Base Remain Height"
+  },
   "siteinfo" : {
     "message": "Siteinfo"
   },

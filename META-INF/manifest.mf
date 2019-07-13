@@ -7,8 +7,8 @@ SHA1-Digest: y5nw5AqCg3raX0YuSjOgabsS/6Y=
 
 Name: autopagerize.user.js
 Digest-Algorithms: MD5 SHA1
-MD5-Digest: hsYbKJ/YMjViU5dsYbL4SA==
-SHA1-Digest: yci2nfWEA/cT4lhs5RRsno0ZTgo=
+MD5-Digest: lbho2x5FbAKz9C68j2vE7w==
+SHA1-Digest: Cl7F3/v2pPZlHT59P+gA/g6Q830=
 
 Name: background.html
 Digest-Algorithms: MD5 SHA1
@@ -17,8 +17,8 @@ SHA1-Digest: 3KWApqYH3EsFM0K9spU96rf58B0=
 
 Name: background.js
 Digest-Algorithms: MD5 SHA1
-MD5-Digest: YbdXfQsJXbxiWYUYgFuz4w==
-SHA1-Digest: KvxeFCIRumW4gRxUXwAdFgR7Ey4=
+MD5-Digest: ONLinvHRVPTBNmPTxxaCyw==
+SHA1-Digest: xWBfWIxXUHc40gGe/wv8UKYSWY4=
 
 Name: error.html
 Digest-Algorithms: MD5 SHA1
@@ -52,8 +52,8 @@ SHA1-Digest: ub84pGf6gw2F5NA8ymuCElzaBSc=
 
 Name: manifest.json
 Digest-Algorithms: MD5 SHA1
-MD5-Digest: FcwvEHrslsKr/xXBdM3TKQ==
-SHA1-Digest: EyRribIzSovLTmoUUt56j/o+/9M=
+MD5-Digest: D8RbwIaf5cvZrEDDgRzwlA==
+SHA1-Digest: k18wiKjEYbJoov5Bh0s7dcD3TzE=
 
 Name: options.css
 Digest-Algorithms: MD5 SHA1
@@ -62,13 +62,13 @@ SHA1-Digest: qSjfsMqgRhbOyrFFtLQG0hfQS3Y=
 
 Name: options.html
 Digest-Algorithms: MD5 SHA1
-MD5-Digest: F8l5bhO09VZu/+QkLr9GXg==
-SHA1-Digest: oZkBB4ZSfonl8H2QInLSbEPMXyw=
+MD5-Digest: NPZSDiVqfMkgiKyWj69SDA==
+SHA1-Digest: KuszWo3APwsPseurNB/OK9Wuj8A=
 
 Name: options.js
 Digest-Algorithms: MD5 SHA1
-MD5-Digest: t11o08ptTrZ6cMp0oypnnw==
-SHA1-Digest: GhMTAucYuFoNY8azCafsfZcNONo=
+MD5-Digest: 3apH6eMiEkLw3XHNNq0qvA==
+SHA1-Digest: HrmNhtkMEC1EbQmt5pRiTWWDCXA=
 
 Name: popup.html
 Digest-Algorithms: MD5 SHA1
@@ -82,8 +82,8 @@ SHA1-Digest: fJwRQ8wK8SnB3qu/TXDO5p1Y89Y=
 
 Name: siteinfo.js
 Digest-Algorithms: MD5 SHA1
-MD5-Digest: 2hanlwBUJ/zwdnyiR8dvnw==
-SHA1-Digest: xk1zEmrulANPR2vm8icBzOJ+mio=
+MD5-Digest: b4/gMwmj95aAkxA5Cn2KXw==
+SHA1-Digest: GX8zFQhmABsCaYYLIrgatXrzFOU=
 
 Name: utils.js
 Digest-Algorithms: MD5 SHA1
@@ -92,13 +92,13 @@ SHA1-Digest: iIT0pgHC6iXomHWIk+Ky/BNuiYA=
 
 Name: _locales/en/messages.json
 Digest-Algorithms: MD5 SHA1
-MD5-Digest: 0/ThbbuY7absuTXsaIrTVQ==
-SHA1-Digest: ybISgbrcKgo+LJEp1gi/GTwdD3Q=
+MD5-Digest: uZ1W7pvM/yuHm4hD2YP4cQ==
+SHA1-Digest: EqdL1wmOru311ge7Z11Ayp00lIA=
 
 Name: _locales/ja/messages.json
 Digest-Algorithms: MD5 SHA1
-MD5-Digest: +yxhQMANe7cGyY6QwaqYpA==
-SHA1-Digest: amK9rdcd/0EclaN0aqOeewIrb18=
+MD5-Digest: 7pdg+f8XyX1v/gNBXz5HuA==
+SHA1-Digest: /VKX7Palk0lFbDf6ECQhWLRq1pE=
 
 Name: _locales/ru/messages.json
 Digest-Algorithms: MD5 SHA1

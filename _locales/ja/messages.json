@@ -47,6 +47,12 @@
   "display_message_bar" : {
     "message": "メッセージバーを表示"
   },
+  "display_page_break" : {
+    "message": "表示改ページ"
+  },
+  "base_remain_height" : {
+    "message": "ベースは高さのままです"
+  },
   "siteinfo" : {
     "message": "サイト情報"
   },
