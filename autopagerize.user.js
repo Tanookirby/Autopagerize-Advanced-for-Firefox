@@ -248,6 +248,14 @@ AutoPager.prototype.load = function(htmlDoc, url) {
         this.error()
         return
     }
+
+    // document filters may need access to a <script> element
+    AutoPager.documentFilters.forEach(function(df) {
+        df(htmlDoc)
+    })
+
+    removeScripts(htmlDoc)
+
     try {
         var page = getElementsByXPath(this.info.pageElement, htmlDoc)
         var url = this.getNextURL(this.info.nextLink, htmlDoc, this.requestURL)
@@ -439,6 +447,7 @@ var fixImgThumb = function() {
 }
 
 AutoPager.filters = []
+AutoPager.documentFilters = []
 AutoPager.launchAutoPager = function(list) {
 	fixLinkRel()
     fixImgThumb()
@@ -533,6 +542,29 @@ if (location.href.match('^http://[^.]+\.google\.(?:[^.]{2,3}\.)?[^./]{2,3}/.*(&f
     var to = location.href.replace(/&fp=.*/, '')
     // console.log([location.href, to])
     location.href = to
+}
+// fix google news search thumbnails
+// https://www.google.com/search?q=food&tbm=nws
+if (/^https?:\/\/(www\.)?google(\.com?)?(\.\w\w)?\/search.*?[?&]tbm=nws/.test(location.href)) {
+    AutoPager.documentFilters.push(function (doc) {
+        var scripts = doc.getElementsByTagName('script')
+        for (var i = scripts.length; --i >= 0; ) {
+            var text = scripts[i].text
+            if (text.indexOf('_setImagesSrc') > 0) {
+                var re = /(["'])(data:image.*?)\1[\s\S]*?(["'])(news-thumbnail-image-.*?)\3/g
+                var m
+                while ((m = re.exec(text))) {
+                    var el = doc.getElementById(m[4])
+                    if (el) {
+                        el.src = m[2].replace(/\\x([0-9a-f]{2})/gi, function (_, code) {
+                            return String.fromCharCode(parseInt(code, 16))
+                        })
+                    }
+                }
+                return
+            }
+        }
+    })
 }
 // fix youtube thumbnails
 // http://www.youtube.com/results?search_query=a
@@ -741,8 +773,7 @@ function loadWithXHR(url, callback, errback) {
     req.open('GET', url)
     req.responseType = 'document'
     req.addEventListener('load', function (event) {
-        var doc = removeScripts(event.target.response)
-        callback(doc, event.target.responseURL)
+        callback(event.target.response, event.target.responseURL)
     })
     req.addEventListener('error', errback)
     req.send()
@@ -761,8 +792,7 @@ function loadWithIframe(url, callback, errback) {
             }
             else {
                 var loadedURL = iframe.contentWindow ? iframe.contentWindow.location.href : null
-                var doc = removeScripts(iframe.contentDocument)
-                callback(doc, loadedURL)
+                callback(iframe.contentDocument, loadedURL)
             }
             iframe.parentNode.removeChild(iframe)
         }
